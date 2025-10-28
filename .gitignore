@@ -4,3 +4,4 @@ out
 .DS_Store
 .context/
 extension.js*
+*.vsix
