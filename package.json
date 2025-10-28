@@ -1,0 +1,85 @@
+{
+	"name": "relog-asm-dsl",
+	"version": "0.0.24",
+	"displayName": "RelogASM DSL (LSP)",
+	"description": "VS Code extension providing LSP support (semantic tokens & diagnostics) for the RelogASM DSL.",
+	"keywords": [
+		"relog",
+		"relog-asm",
+		"dsl",
+		"lsp",
+		"language server"
+	],
+	"publisher": "RelogRun",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/relogrun/relog-asm-vscode.git"
+	},
+	"engines": {
+		"vscode": "^1.80.0"
+	},
+	"license": "MIT",
+	"categories": [
+		"Programming Languages"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"languages": [
+			{
+				"id": "relog-asm",
+				"aliases": [
+					"Relog-ASM",
+					"relog-asm"
+				],
+				"extensions": [
+					".rasm"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "relog-asm",
+				"scopeName": "source.relog-asm",
+				"path": "./syntaxes/dsl.tmLanguage.json"
+			}
+		],
+		"configuration": {
+			"title": "Relog-ASM DSL",
+			"properties": {
+				"dslLsp.serverPath": {
+					"type": "string",
+					"default": "",
+					"description": "Optional override path to dsl-lsp binary. If empty, bundled binary is used."
+				}
+			}
+		},
+		"configurationDefaults": {
+			"[relog-asm]": {
+				"editor.semanticHighlighting.enabled": true
+			}
+		}
+	},
+	"files": [
+		"out/**",
+		"syntaxes/**",
+		"language-configuration.json",
+		"server/bin/**",
+		"node_modules/**",
+		"package.json",
+		"README.md",
+		"LICENSE.md"
+	],
+	"scripts": {
+		"compile": "tsc -p .",
+		"watch": "tsc -w -p ."
+	},
+	"dependencies": {
+		"vscode-languageclient": "^9.0.1"
+	},
+	"devDependencies": {
+		"@types/node": "^24.9.2",
+		"@types/vscode": "^1.80.0",
+		"typescript": "^5.4.0"
+	}
+}

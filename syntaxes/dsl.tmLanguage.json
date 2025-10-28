@@ -1,0 +1,52 @@
+{
+	"scopeName": "source.relog-asm",
+	"patterns": [
+		{ "name": "comment.line.double-slash.relog-asm", "match": "//.*$" },
+		{
+			"name": "comment.block.relog-asm",
+			"begin": "/\\*",
+			"end": "\\*/"
+		},
+
+		{
+			"name": "string.quoted.double.relog-asm",
+			"match": "\"(?:[^\"\\\\]|\\\\.)*\""
+		},
+		{
+			"name": "string.quoted.raw.relog-asm",
+			"begin": "r\"",
+			"end": "\""
+		},
+
+		{
+			"name": "meta.label.relog-asm",
+			"begin": "^\\s*:",
+			"end": "$",
+			"patterns": [
+				{ "name": "entity.name.label.relog-asm", "match": "\\w+(?:::\\w+)*" }
+			]
+		},
+
+		{
+			"name": "meta.module.call.relog-asm",
+			"match": "\\b([A-Za-z_]\\w*)(\\.)([A-Za-z_]\\w*)\\b",
+			"captures": {
+				"1": { "name": "support.namespace.relog-asm" },
+				"2": { "name": "punctuation.accessor.dot.relog-asm" },
+				"3": { "name": "entity.name.function.relog-asm" }
+			}
+		},
+
+		{ "name": "punctuation.separator.arrow.relog-asm", "match": "->" },
+
+		{
+			"name": "keyword.control.relog-asm",
+			"match": "(?<!:)\\b(use|as|let|call|await|halt|jmp|jmpif|jmpifnot|cmp|async|status|cancel|select|trap|untrap|timeout|import|mod|add|sub|mul|div|rem|neg|json\\.(?:parse|stringify|get|len))\\b"
+		},
+
+		{
+			"name": "constant.numeric.relog-asm",
+			"match": "\\b-?\\d+(?:\\.\\d+)?\\b"
+		}
+	]
+}
