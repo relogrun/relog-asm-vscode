@@ -1,16 +1,16 @@
-## Get ready
+## Install
 
-Grab the archive from [latest release](https://github.com/relogrun/relog-asm-vscode/releases/latest):
+Grab latest version from [release](https://github.com/relogrun/relog-asm-vscode/releases/latest):
 
 Unzip.
 
-Run:
+Install:
   
 ```bash
 code --install-extension relog-asm-dsl-x.x.x.vsix
 ```
 
-## Build
+## Build from repo
 
 Update `dsl-lsp` bins.
 
