@@ -4,8 +4,6 @@
 
 Grab latest version from [release](https://github.com/relogrun/relog-asm-vscode/releases/latest):
 
-Unzip.
-
 Install:
   
 ```bash
