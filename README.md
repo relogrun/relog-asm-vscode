@@ -1,4 +1,4 @@
-# RelogASM Language — LSP + VS Code Extension
+# RelogASM LSP + VS Code Extension
 
 ## Install
 
