@@ -12,7 +12,7 @@ code --install-extension relog-asm-dsl-x.x.x.vsix
 
 ## Build from repo
 
-Update `dsl-lsp` bins.
+Update `server/bin` LSP bins.
 
 Install deps:
 
