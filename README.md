@@ -1,3 +1,5 @@
+# RelogASM Language — LSP + VS Code Extension
+
 ## Install
 
 Grab latest version from [release](https://github.com/relogrun/relog-asm-vscode/releases/latest):

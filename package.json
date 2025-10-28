@@ -1,6 +1,6 @@
 {
 	"name": "relog-asm-dsl",
-	"version": "0.0.24",
+	"version": "0.1.0",
 	"displayName": "RelogASM DSL (LSP)",
 	"description": "VS Code extension providing LSP support (semantic tokens & diagnostics) for the RelogASM DSL.",
 	"keywords": [
